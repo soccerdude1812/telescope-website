@@ -1,0 +1,60 @@
+import type { Metadata } from "next";
+import { Inter, JetBrains_Mono } from "next/font/google";
+import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  title: "MVHS Physics & Astronomy Club \u2014 Autonomous Telescope Project",
+  description:
+    "A student-built autonomous telescope bringing the night sky to the Bay Area. Built by 7 high school students at Mountain View High School.",
+  keywords: [
+    "telescope","astronomy","MVHS","Mountain View High School",
+    "autonomous telescope","star party","STEM","physics club",
+    "Dobsonian","astrophotography",
+  ],
+  authors: [{ name: "MVHS Physics & Astronomy Club" }],
+  openGraph: {
+    title: "MVHS Physics & Astronomy Club \u2014 Autonomous Telescope Project",
+    description: "A student-built autonomous telescope bringing the night sky to the Bay Area.",
+    type: "website",
+    locale: "en_US",
+    siteName: "MVHS Astronomy",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MVHS Physics & Astronomy Club \u2014 Autonomous Telescope Project",
+    description: "A student-built autonomous telescope bringing the night sky to the Bay Area.",
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html
+      lang="en"
+      className={`${inter.variable} ${jetbrainsMono.variable} h-full antialiased`}
+    >
+      <body className="min-h-full flex flex-col bg-[#030712] text-slate-200">
+        <Navbar />
+        <main className="flex-1">{children}</main>
+        <Footer />
+      </body>
+    </html>
+  );
+}
