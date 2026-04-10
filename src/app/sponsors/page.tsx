@@ -56,12 +56,13 @@ export default function SponsorsPage() {
               href={sponsor.url}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={`Visit ${sponsor.name} website`}
               className="group p-8 rounded-2xl bg-[#0D1219] border border-white/[0.08] shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] hover:border-white/[0.12] hover:bg-[#111922] transition-all duration-300 flex flex-col items-center text-center"
             >
               <div className="w-full h-20 flex items-center justify-center mb-6">
                 <Image
                   src={sponsor.logo}
-                  alt={sponsor.name}
+                  alt={`${sponsor.name} logo`}
                   width={200}
                   height={60}
                   className="max-h-16 w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-300"
