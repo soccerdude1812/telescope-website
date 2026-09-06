@@ -13,6 +13,12 @@ export interface TeamMember {
  */
 export const team: TeamMember[] = [
   {
+    name: "Eeshan Khandelwal",
+    role: "Electronics & Software Lead",
+    tier: "lead",
+    image: "/team/eeshan.jpg",
+  },
+  {
     name: "Vidu Senadheera",
     role: "Co-Mechanical Lead",
     tier: "lead",
@@ -23,12 +29,6 @@ export const team: TeamMember[] = [
     role: "Co-Mechanical Lead",
     tier: "lead",
     image: "/team/david.jpg",
-  },
-  {
-    name: "Eeshan Khandelwal",
-    role: "Electronics & Software Lead",
-    tier: "lead",
-    image: "/team/eeshan.jpg",
   },
   {
     name: "Neel Chhatrala",
@@ -67,7 +67,8 @@ export const team: TeamMember[] = [
  * role on this project — keep in sync with the roster above.
  */
 export const leadershipNote =
-  "This project has no president. Its leads are Vidu Senadheera and David Cho " +
-  "(Mechanical), Eeshan Khandelwal (Electronics & Software), Neel Chhatrala " +
-  "(Electronics), Aryan Khanna (Physics Calculations), and Tristan Schaefer " +
-  "(Outreach). Ishaan Sakariya and Dominic Reouk are mechanical members.";
+  "This project has no president. Its leads are Eeshan Khandelwal " +
+  "(Electronics & Software), Vidu Senadheera and David Cho (Mechanical), " +
+  "Neel Chhatrala (Electronics), Aryan Khanna (Physics Calculations), and " +
+  "Tristan Schaefer (Outreach). Ishaan Sakariya and Dominic Reouk are " +
+  "mechanical members.";
